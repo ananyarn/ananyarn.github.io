@@ -172,6 +172,8 @@ h1 > span {
 
 .hero_wrapper {
   position: relative;
+  padding-bottom: 320px;
+  border-bottom: 1px solid var(--white);
 }
 
 .hero {
