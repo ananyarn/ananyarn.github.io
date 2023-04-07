@@ -187,6 +187,14 @@ h1 > span {
   margin-block-end: 24px;
 }
 
+.desktop-br {
+  display: none;
+}
+
+.hero_description {
+  margin-block-end: 24px;
+}
+
 @media (min-width: 37.5em) {
   .hero_img {
     height: auto;
@@ -209,6 +217,21 @@ h1 > span {
   .hero_headline > br {
     display: inline-block;
   }
+
+  .desktop-br {
+    display: none;
+  }
+
+  .hero_description {
+    margin-block-end: 34px;
+    text-align: justify;
+  }
+
+  .hero_wrapper {
+    position: relative;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--white);
+  }
 }
 
 @media (min-width: 62.5em) {
@@ -225,6 +248,18 @@ h1 > span {
     margin-top: 0;
   }
   .hero_headline > br {
-    display: none;
+    display: inline-block;
+  }
+  .desktop-br {
+    display: inline-block;
+  }
+  .hero_description {
+    width: 38ch;
+    margin-block-end: 66px;
+  }
+  .hero_wrapper {
+    position: relative;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--white);
   }
 }
