@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Ananya Reetha Noble</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div id="theme-toggle">🌞</div>
+  <div class="page-wrapper">
+    <main>
+      <canvas id="blobs-canvas"></canvas>
+
+      <nav class="nav-icons">
+        <a href="../index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="projects.html">projects</a>
+      </nav>
+
+      <section id="contact" class="section card">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me through any of the platforms below:</p>
+
+        <ul class="contact-list">
+          <li>📧 <a href="mailto:ananyarita@gmail.com">ananyarita@gmail.com</a></li>
+          <li>🔗 <a href="https://www.linkedin.com/in/ananya298" target="_blank">LinkedIn</a></li>
+          <li>📝 <a href="https://arn2908.medium.com" target="_blank">Medium</a></li>
+          <li>💻 <a href="https://github.com/ananyarn" target="_blank">GitHub</a></li>
+        </ul>
+
+        <form action="https://formsubmit.co/ananyarita@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <p id="form-status"></p>
+        
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ananya Reetha Noble</p>
+      <p class="sora-note">Images generated using <a href="https://openai.com/sora" target="_blank">Sora by OpenAI</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = "✅ Message sent successfully!";
+        } else {
+          status.textContent = "⚠️ Something went wrong. Please try again.";
+        }
+      } catch (err) {
+        status.textContent = "❌ Submission failed. Please check your connection.";
+      }
+    });
+  </script>
+  <script src="../script.js"></script>
+  <script src="../blobs.js"></script>
+</body>
+</html>

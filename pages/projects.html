@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Ananya Reetha Noble</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div id="theme-toggle">🌞</div>
+  <div class="page-wrapper">
+    <main>
+      <canvas id="blobs-canvas"></canvas>
+
+      <nav class="nav-icons">
+        <a href="../index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <section id="projects" class="section card">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+          <h3>💡 Algorithm-to-Python Source Code Translator using LLMs</h3>
+          <p><strong>Tech Stack:</strong> Python, Hugging Face Transformers, Mistral 7B, LoRA, Gemini API</p>
+          <p>This project explores how large language models can be fine-tuned to automate the conversion of algorithmic descriptions into executable Python code.</p>
+          <ul>
+            <li>Fine-tuned the Mistral 7B model using Low-Rank Adaptation (LoRA)</li>
+            <li>Created a custom dataset using Gemini API</li>
+            <li>Optimized prompts and configurations for higher accuracy</li>
+            <li>Presented at ITECHCET 2024 & published in AIP Conference Proceedings</li>
+          </ul>
+          <a href="https://doi.org/10.1063/5.0247544" target="_blank">📎 Research Paper DOI</a>
+          <a href="https://github.com/annawilsonleo/pseudocode-to-python-sourcecode" target="_blank">🗁 Source Code</a>
+          <a href="https://huggingface.co/datasets/ananyarn/Algorithm_and_Python_Source_Code" target="_blank">📈 Dataset</a>
+        </div>
+
+        <div class="project-card">
+          <h3>💼 Feature Selection & Salary Prediction using Rough Set Theory</h3>
+          <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas</p>
+          <p>A predictive model to estimate software developer salaries using Rough Set Theory for feature selection.</p>
+          <ul>
+            <li>Used Rough Set Theory for key feature extraction</li>
+            <li>Trained regression models on cleaned data</li>
+            <li>Enhanced model interpretability and accuracy</li>
+          </ul>
+          <a href="https://github.com/ananyarn/software-developer-salary-prediction/tree/master" target="_blank">🗁 Source Code</a>
+        </div>
+
+        <div class="project-card">
+          <h3>🌐 Personal Portfolio Website</h3>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+          <p>A responsive portfolio site showcasing projects, publications, and contact information.</p>
+          <ul>
+            <li>Custom dark/light modes & animated transitions</li>
+            <li>Clean layout with accessible design</li>
+          </ul>
+          <a href="https://ananyarn.github.io/" target="_blank">🔗 Visit Portfolio</a>
+          <a href="https://github.com/ananyarn/ananyarn.github.io" target="_blank">🗁 Source Code</a>
+        </div>
+
+        <div class="project-card">
+          <h3>🌫 Air Quality Prediction Model (PM2.5)</h3>
+          <p><strong>Tech Stack:</strong> Python, Scikit-learn, Time Series Analysis</p>
+          <p>Forecasting air quality using historical sensor data and regression models.</p>
+          <ul>
+            <li>Cleaned and preprocessed sensor data</li>
+            <li>Engineered time-based features</li>
+            <li>Trained and evaluated forecasting models</li>
+          </ul>
+          <a href="https://github.com/ananyarn/air-quality-prediction" target="_blank">🗁 Source Code</a>
+        </div>
+
+        <div class="project-card">
+          <h3>📘 Data Structures & Algorithms (DSA) Repository</h3>
+          <p><strong>Tech Stack:</strong> Python, GitHub, Markdown</p>
+          <p>An organized learning repository named "Felicity" for foundational DSA concepts with clean code and visuals.</p>
+          <ul>
+            <li>Wrote explanations with pseudocode & complexity analysis</li>
+            <li>Implemented core algorithms in Python</li>
+            <li>Made beginner-friendly with good structure</li>
+          </ul>
+          <a href="https://github.com/ananyarn/felicity-dsa-prep" target="_blank">🔗 Felicity</a>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ananya Reetha Noble</p>
+      <p class="sora-note">Images generated using <a href="https://openai.com/sora" target="_blank">Sora by OpenAI</a></p>
+    </footer>
+  </div>
+  <script src="../script.js"></script>
+  <script src="../blobs.js"></script>
+</body>
+</html>
