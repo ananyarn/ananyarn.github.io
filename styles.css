@@ -385,3 +385,27 @@ body.dark .project-card {
 #projects a:last-child {
   margin-right: 0; /* Prevent extra space after last link */
 }
+
+
+.resume-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.resume-button:hover {
+  background-color: #622c4f;
+  transform: scale(1.03);
+}
