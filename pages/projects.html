@@ -24,12 +24,11 @@
 
         <div class="project-card">
           <h3>💡 Algorithm-to-Python Source Code Translator using LLMs</h3>
-          <p><strong>Tech Stack:</strong> Python, Hugging Face Transformers, Mistral 7B, LoRA, Gemini API</p>
-          <p>This project explores how large language models can be fine-tuned to automate the conversion of algorithmic descriptions into executable Python code.</p>
+          <p><strong>Tech Stack:</strong> Python, Hugging Face Transformers, Mistral 7B, LoRA, PEFT, Gemini API</p>
+          <p>Fine-tuned Mistral 7B using LoRA (rank=32, 4-bit quantization) to automate the translation of algorithmic descriptions into executable Python code.</p>
           <ul>
-            <li>Fine-tuned the Mistral 7B model using Low-Rank Adaptation (LoRA)</li>
-            <li>Created a custom dataset using Gemini API</li>
-            <li>Optimized prompts and configurations for higher accuracy</li>
+            <li>Built a custom dataset of 18,000 algorithm-code pairs using the Gemini API, publicly released on Hugging Face</li>
+            <li>Achieved 93.5% accuracy and perplexity of 2.03, outperforming prior Seq2Seq approaches (88.7%)</li>
             <li>Presented at ITECHCET 2024 & published in AIP Conference Proceedings</li>
           </ul>
           <a href="https://doi.org/10.1063/5.0247544" target="_blank">📎 Research Paper DOI</a>
@@ -38,20 +37,65 @@
         </div>
 
         <div class="project-card">
+          <h3>🌊 Biofouling Detection and Classification using Deep Learning</h3>
+          <p><strong>Tech Stack:</strong> Python, PyTorch, EfficientNetV2, DenseNet121, YOLOv8, CBAM, BYOL</p>
+          <p>Developed a deep learning framework for six-class marine biofouling classification under simulated underwater imaging conditions. Manuscript in preparation.</p>
+          <ul>
+            <li>Built a custom underwater degradation augmentation pipeline (colour attenuation, turbidity, backscatter, non-uniform illumination) to expand a 448-image dataset to 3,443 training samples</li>
+            <li>Evaluated seven model variants across EfficientNetV2, DenseNet121, and YOLOv8m with CBAM attention and BYOL self-supervised pretraining</li>
+            <li>Proposed EfficientNetV2-S + CBAM + BYOL achieved validation mAP@50 of 0.9624 and macro F1-score of 0.94, suitable for deployment on autonomous underwater vehicles</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h3>🤖 Local RAG Chatbot with Document QA</h3>
+          <p><strong>Tech Stack:</strong> Python, LangChain, ChromaDB, Sentence Transformers, Gemma 2B, Ollama, FastAPI, Docker</p>
+          <p>A fully offline retrieval-augmented generation chatbot supporting context-grounded question answering over uploaded documents.</p>
+          <ul>
+            <li>Integrated Gemma 2B via Ollama with ChromaDB vector search and sentence-transformers for semantic retrieval</li>
+            <li>Built a FastAPI backend supporting PDF and TXT document upload</li>
+            <li>Deployed entirely via Docker with no external API dependencies</li>
+          </ul>
+          <a href="https://github.com/ananyarn/rag-chatbot" target="_blank">🗁 Source Code</a>
+        </div>
+
+        <div class="project-card">
+          <h3>🧠 Deep Learning Implementations from Scratch</h3>
+          <p><strong>Tech Stack:</strong> Python, PyTorch, CIFAR-10, MNIST</p>
+          <p>Implemented core deep learning architectures from scratch to build a strong foundational understanding of how modern models work at every level.</p>
+          <ul>
+            <li>Built MLP, CNN, VGG19, DenseNet, and InceptionV3 on CIFAR-10 and MNIST</li>
+            <li>Implemented an RNN for Netflix stock price forecasting</li>
+          </ul>
+          <a href="https://github.com/ananyarn/deep-learning-projects" target="_blank">🗁 Source Code</a>
+        </div>
+
+        <div class="project-card">
           <h3>💼 Feature Selection & Salary Prediction using Rough Set Theory</h3>
           <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas</p>
-          <p>A predictive model to estimate software developer salaries using Rough Set Theory for feature selection.</p>
+          <p>Applied Fuzzy Rough Set Theory with the Quick Reduct algorithm for feature selection on Stack Overflow Developer Survey data (2018–2020).</p>
           <ul>
-            <li>Used Rough Set Theory for key feature extraction</li>
-            <li>Trained regression models on cleaned data</li>
-            <li>Enhanced model interpretability and accuracy</li>
+            <li>Identified the minimal subset of attributes most predictive of salary (education, location, years of experience)</li>
+            <li>Trained a Decision Tree regression model achieving R² scores of up to 0.9997 and MAE as low as 153.32</li>
           </ul>
           <a href="https://github.com/ananyarn/software-developer-salary-prediction/tree/master" target="_blank">🗁 Source Code</a>
         </div>
 
         <div class="project-card">
+          <h3>🌫 Air Quality Prediction Model (PM2.5)</h3>
+          <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas</p>
+          <p>Built a regression model to predict PM2.5 pollutant levels from 36,000+ hourly air quality records (2017–2022).</p>
+          <ul>
+            <li>Engineered temporal features from raw timestamps and applied Label Encoding for categorical time bins</li>
+            <li>Compared Linear Regression, Decision Tree, and Random Forest regressors with GridSearchCV hyperparameter tuning</li>
+            <li>Achieved RMSE of 8.97 with the optimized Decision Tree model</li>
+          </ul>
+          <a href="https://github.com/ananyarn/air-quality-prediction" target="_blank">🗁 Source Code</a>
+        </div>
+
+        <div class="project-card">
           <h3>🌐 Personal Portfolio Website</h3>
-          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
           <p>A responsive portfolio site showcasing projects, publications, and contact information.</p>
           <ul>
             <li>Custom dark/light modes & animated transitions</li>
@@ -61,31 +105,7 @@
           <a href="https://github.com/ananyarn/ananyarn.github.io" target="_blank">🗁 Source Code</a>
         </div>
 
-        <div class="project-card">
-          <h3>🌫 Air Quality Prediction Model (PM2.5)</h3>
-          <p><strong>Tech Stack:</strong> Python, Scikit-learn, Time Series Analysis</p>
-          <p>Forecasting air quality using historical sensor data and regression models.</p>
-          <ul>
-            <li>Cleaned and preprocessed sensor data</li>
-            <li>Engineered time-based features</li>
-            <li>Trained and evaluated forecasting models</li>
-          </ul>
-          <a href="https://github.com/ananyarn/air-quality-prediction" target="_blank">🗁 Source Code</a>
-        </div>
-
-        <div class="project-card">
-          <h3>📘 Data Structures & Algorithms (DSA) Repository</h3>
-          <p><strong>Tech Stack:</strong> Python, GitHub, Markdown</p>
-          <p>An organized learning repository named "Felicity" for foundational DSA concepts with clean code and visuals.</p>
-          <ul>
-            <li>Wrote explanations with pseudocode & complexity analysis</li>
-            <li>Implemented core algorithms in Python</li>
-            <li>Made beginner-friendly with good structure</li>
-          </ul>
-          <a href="https://github.com/ananyarn/felicity-dsa-prep" target="_blank">🔗 Felicity</a>
-        </div>
       </section>
-
 
     </main>
 
